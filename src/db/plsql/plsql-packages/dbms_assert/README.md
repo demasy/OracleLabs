@@ -94,4 +94,8 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE ('User e-Mail=> ' || L_EMAIL);
 END;
 ```
-> User e-Mail=> demasy@demasy.io
+```
+Query=> SELECT EMAIL FROM XXD.XXD_USERS WHERE 1 = 1 AND USER_NAME ='demasy'
+X_EMAIL=> demasy@demasy.io
+User e-Mail=> demasy@demasy.io
+```

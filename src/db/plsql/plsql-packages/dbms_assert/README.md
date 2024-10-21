@@ -80,3 +80,18 @@ IS
     END GET_USER_REC;
 END XXD_SQL_INJECTION_PKG;
 ```
+```sql
+DECLARE
+    l_USER_NAME   VARCHAR2 (32767);
+    L_EMAIL       VARCHAR2 (32767);
+BEGIN
+    l_USER_NAME := 'demasy';
+
+    XXD.XXD_SQL_INJECTION_PKG.GET_USER_REC (P_USER_NAME   => l_USER_NAME,
+                                            X_EMAIL       => L_EMAIL);
+
+
+    DBMS_OUTPUT.PUT_LINE ('User e-Mail=> ' || L_EMAIL);
+END;
+```
+> User e-Mail=> demasy@demasy.io

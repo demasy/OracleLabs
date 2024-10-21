@@ -27,7 +27,8 @@ SQL injection is a critical security vulnerability in which attackers manipulate
 CREATE TABLE XXD.XXD_USERS
 (
     USER_ID          NUMBER,
-    USER_NAME        VARCHAR2 (20),
+    USER_NAME        VARCHAR2 (20 CHAR),
+    EMAIL            VARCHAR2 (100 BYTE),
     CREATION_DATE    DATE
 );
 ```

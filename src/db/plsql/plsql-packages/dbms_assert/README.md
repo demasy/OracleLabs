@@ -80,6 +80,9 @@ IS
     END GET_USER_REC;
 END XXD_SQL_INJECTION_PKG;
 ```
+
+#### Call procedure without SQL injection:
+
 ```sql
 DECLARE
     l_USER_NAME   VARCHAR2 (32767);

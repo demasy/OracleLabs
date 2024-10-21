@@ -100,6 +100,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE ('User e-Mail=> ' || L_EMAIL);
 END;
 ```
+##### Result
 ```
 Query=> SELECT EMAIL FROM XXD.XXD_USERS WHERE 1 = 1 AND USER_NAME ='demasy'
 X_EMAIL=> demasy@demasy.io
@@ -124,6 +125,7 @@ BEGIN
 END;
 ```
 
+##### Result
 ```
 Query=> SELECT EMAIL FROM XXD.XXD_USERS WHERE 1 = 1 AND USER_NAME ='ahmed ' OR USER_NAME='merihan'--'
 X_EMAIL=> merihan@demasy.io

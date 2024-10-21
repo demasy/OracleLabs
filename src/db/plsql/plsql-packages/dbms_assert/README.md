@@ -18,3 +18,16 @@ SQL injection is a critical security vulnerability in which attackers manipulate
 - Time-based Blind SQL Injection
 - Second-order SQL Injection
 - Out-of-band SQL Injection
+
+<be>
+
+ ## Demo
+
+```sql
+CREATE TABLE XXD.XXD_USERS
+(
+    USER_ID          NUMBER,
+    USER_NAME        VARCHAR2 (20),
+    CREATION_DATE    DATE
+);
+```

@@ -6,3 +6,12 @@
 
 ## SQL Injection
 SQL injection is a critical security vulnerability in which attackers manipulate SQL queries by inserting malicious code into an application's input fields or parameters. If the application fails to validate or sanitize these inputs properly, the attacker can modify the SQL queries in harmful ways. This can enable them to access sensitive data, alter or delete records, bypass authentication, or even gain control of the database.
+
+### SQL Injection Techniques
+- Classic SQL Injection
+- Union-based SQL Injection
+- Error-based SQL Injection
+- Blind SQL Injection
+- Time-based Blind SQL Injection
+- Second-order SQL Injection
+- Out-of-band SQL Injection

@@ -84,7 +84,7 @@ END XXD_SQL_INJECTION_PKG;
 /
 ```
 
-#### Call procedure without SQL injection:
+#### Call procedure without SQL injection
 
 ```sql
 DECLARE
@@ -104,4 +104,28 @@ END;
 Query=> SELECT EMAIL FROM XXD.XXD_USERS WHERE 1 = 1 AND USER_NAME ='demasy'
 X_EMAIL=> demasy@demasy.io
 User e-Mail=> demasy@demasy.io
+```
+
+
+#### Example of statement modification
+
+```sql
+DECLARE
+    l_USER_NAME   VARCHAR2 (32767);
+    L_EMAIL       VARCHAR2 (32767);
+BEGIN
+    l_USER_NAME := 'ahmed '' OR USER_NAME=''merihan''--';
+
+    XXD.XXD_SQL_INJECTION_PKG.GET_USER_REC (P_USER_NAME   => l_USER_NAME,
+                                            X_EMAIL       => L_EMAIL);
+
+
+    DBMS_OUTPUT.PUT_LINE ('User e-Mail=> ' || L_EMAIL);
+END;
+```
+
+```
+Query=> SELECT EMAIL FROM XXD.XXD_USERS WHERE 1 = 1 AND USER_NAME ='ahmed ' OR USER_NAME='merihan'--'
+X_EMAIL=> merihan@demasy.io
+User e-Mail=> merihan@demasy.io
 ```
